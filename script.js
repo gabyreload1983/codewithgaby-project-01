@@ -3,6 +3,7 @@ const randomNumber = Math.floor(Math.random() * 100) + 1;
 const checkBtn = document.getElementById("checkBtn");
 const inputNumber = document.getElementById("guess");
 const resetBtn = document.getElementById("resetBtn");
+let won = false;
 let attempts = 0;
 
 checkBtn.addEventListener("click", () => {
@@ -11,7 +12,7 @@ checkBtn.addEventListener("click", () => {
 
 inputNumber.addEventListener("keypress", (e) => {
   const keyPress = e.key;
-  if (keyPress === "Enter") {
+  if (keyPress === "Enter" && !won) {
     checkNumber();
   }
 });
@@ -33,6 +34,7 @@ function checkNumber() {
     message.className = "success";
     checkBtn.style.display = "none";
     resetBtn.style.display = "inline";
+    won = true;
   } else if (userGuess < randomNumber) {
     message.textContent = "Muy bajo. Intenta con un número más grande.";
     message.className = "error";
