@@ -10,7 +10,7 @@ A simple and interactive number-guessing game built with HTML, CSS, and JavaScri
 
 ## 🌐 Live Demo
 
-Check out the project here: [Guess Number Game](https://gabyreload1983.github.io/codewithgaby-project-01/)
+Check out the project here: [Guess Number Game](https://gabyreload1983.github.io/codigomania-project-01/)
 
 ---
 
